@@ -45,8 +45,8 @@
 
     --subtitle: 500 3.2rem/2 var(--font-family);
 
-    --body-bold: 700 2rem/1.4 var(--font-family);
-    --body-regular: 400 2rem/1.4 var(--font-family);
+    --body-lg-bold: 700 2rem/1.4 var(--font-family);
+    --body-lg-regular: 400 2rem/1.4 var(--font-family);
     --body-md-bold: 700 1.6rem/1.4 var(--font-family);
     --body-md-regular: 400 1.6rem/1.4 var(--font-family);
     --body-sm-bold: 700 1.4rem/1.4 var(--font-family);
@@ -54,7 +54,7 @@
     --body-xs-bold: 700 1.2rem/1.4 var(--font-family);
     --body-xs-regular: 400 1.2rem/1.4 var(--font-family);
 
-    --bottom: 700 1.4rem var(--font-family);
+    --button: 700 1.4rem var(--font-family);
     --link: 500 1.4rem var(--font-family);
 
     --font-sm: 700 1rem var(--font-family)
@@ -65,7 +65,38 @@ body {
     color: var(--text-body-color);
     background-color: var(--shape-background);
 
-    & p {
-        font: var(--font-sm);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 118.4rem;
+    padding-inline: 3.2rem;
+    margin-inline: auto;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (width <=375px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
     }
 }
